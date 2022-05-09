@@ -188,10 +188,28 @@ body {
     font-family: "Nunito", sans-serif;
     text-transform: uppercase;
     font-weight: 600; }
-  .home__price svg, .home__area svg, .home__location svg, .home__rooms svg {
-    fill: #c69963;
-    height: 2rem;
-    width: 2rem; }
+  .home__price, .home__area, .home__location, .home__rooms {
+    text-align: center;
+    padding: 0.5rem 0; }
+    .home__price svg, .home__area svg, .home__location svg, .home__rooms svg {
+      fill: #c69963;
+      height: 2.5rem;
+      width: 2.5rem; }
+    .home__price p, .home__area p, .home__location p, .home__rooms p {
+      font-size: 1.3rem;
+      font-weight: 700; }
+  .home__price {
+    grid-column: 1 / span 3;
+    grid-row: 3 / 4; }
+  .home__area {
+    grid-column: 1 / span 3;
+    grid-row: 4 / 5; }
+  .home__location {
+    grid-column: 4 / span 3;
+    grid-row: 3 / 4; }
+  .home__rooms {
+    grid-column: 4 / span 3;
+    grid-row: 4 / 5; }
 
 .gallery {
   background-color: #54483A;

@@ -59,12 +59,38 @@
     &__area,
     &__location,
     &__rooms {
+        text-align: center;
+        padding: 0.5rem 0;
+
         svg {
             fill: $color-primary;
-            height: 2rem;
-            width: 2rem;
+            height: 2.5rem;
+            width: 2.5rem;
         }
 
-        p {}
+        p {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+
+    &__price {
+        grid-column: 1 / span 3;
+        grid-row: 3 / 4;
+    }
+
+    &__area {
+        grid-column: 1 / span 3;
+        grid-row: 4 / 5;
+    }
+
+    &__location {
+        grid-column: 4 / span 3;
+        grid-row: 3 / 4;
+    }
+
+    &__rooms {
+        grid-column: 4 / span 3;
+        grid-row: 4 / 5;
     }
 }
