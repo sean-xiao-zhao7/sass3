@@ -24,6 +24,11 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 400; }
 
+.heading-1 {
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height: 1; }
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -35,8 +40,7 @@ body {
 
 .heading-3 {
   font-size: 1.6rem;
-  color: #c69963;
-  text-transform: uppercase; }
+  color: #c69963; }
 
 .heading-4 {
   font-size: 1.9rem; }
@@ -72,15 +76,101 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+  .sidebar__nav {
+    margin-top: 3.6rem;
+    border: none;
+    border-radius: 0;
+    background-color: #ffe7ca;
+    height: 2px;
+    width: 4rem; }
+    .sidebar__nav::before, .sidebar__nav::after {
+      display: block;
+      content: "";
+      background-color: #ffe7ca;
+      height: 2px;
+      width: 4rem; }
+    .sidebar__nav::before {
+      transform: translateY(-1.5rem); }
+    .sidebar__nav::after {
+      transform: translateY(1.3rem); }
 
 .header {
   background-color: #54483A;
-  grid-column: full-start / col-end 6; }
+  grid-column: full-start / col-end 6;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.83), rgba(16, 29, 44, 0.83)), url(../img/hero.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  grid-gap: 1.5rem;
+  padding: 4rem 8rem 7rem 8rem;
+  justify-content: center; }
+  .header .btn {
+    justify-self: start; }
+  .header__img {
+    height: 3rem;
+    justify-self: center; }
+  .header__seen {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+    font-size: 1.3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: italic;
+    color: #f9f7f6;
+    filter: brightness(70%); }
+    .header__seen::before, .header__seen::after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: currentColor; }
+  .header__seen-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    justify-items: center; }
+    .header__seen-logos img {
+      height: 2.5rem;
+      filter: brightness(70%); }
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .realtors h3 {
+    font-size: 2.2rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: italic;
+    margin-bottom: 2vh; }
+  .realtors__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center; }
+  .realtors__list--img {
+    width: 7rem;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #c69963; }
+  .realtors__list--details {
+    text-transform: uppercase;
+    margin-top: -3px;
+    color: #f9f7f6;
+    font-size: 1.3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600; }
+    .realtors__list--details h4 {
+      color: #c69963; }
 
 .features {
   grid-column: center-start / center-end;
@@ -177,7 +267,7 @@ body {
     padding: 1rem 3rem;
     margin-top: -2rem;
     margin-bottom: 2rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 300; }
   .home > button {
@@ -187,21 +277,22 @@ body {
     border-radius: 0;
     background-color: #c69963;
     color: white;
-    padding: 1rem 0;
-    font-family: "Nunito", sans-serif;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 1rem; }
+    padding: 2rem 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 300;
+    margin-top: 1rem;
+    box-shadow: 0rem 1rem 2rem #bd915c inset; }
   .home__price, .home__area, .home__location, .home__rooms {
     text-align: center;
     padding: 0.5rem 0; }
     .home__price svg, .home__area svg, .home__location svg, .home__rooms svg {
       fill: #c69963;
-      height: 2.5rem;
-      width: 2.5rem; }
+      height: 3rem;
+      width: 3rem; }
     .home__price p, .home__area p, .home__location p, .home__rooms p {
-      font-size: 1.4rem;
-      font-weight: 700; }
+      font-size: 1.7rem;
+      font-family: "Josefin Sans", sans-serif; }
   .home__price {
     grid-column: 1 / span 3;
     grid-row: 3 / 4; }
